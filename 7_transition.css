@@ -45,6 +45,11 @@ body{
     display:block;
 }
 
+/* KEEP jump menu open while moving mouse onto it (professor requirement) */
+#menuItems:hover #jumpMenu{
+    display:block;
+}
+
 /* Jump menu links */
 #jumpMenu li a{
     display:block;
@@ -89,7 +94,7 @@ article{
     transition: all 2s;
 }
 
-/* Article hover (darker + expands) */
+/* Article hover (darker + expands over 2s) */
 article:hover{
     color:black;
     transform:scale(1.15);
