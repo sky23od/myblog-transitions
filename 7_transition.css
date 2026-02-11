@@ -103,7 +103,7 @@ article p:first-of-type::first-letter{
 
 /* Google links arrow */
 a[href*="google.com"]::after{
-    content:url("arrowarrow.png");
+    content:url("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Arrow_right.svg/250px-Arrow_right.svg.png.png");
     margin-left:8px;
 }
 
