@@ -1,0 +1,117 @@
+/* Layout basics */
+body{
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Navigation Menu */
+#menuItems{
+    position:fixed;
+    left:0;
+    top:0;
+    width:200px;
+    height:100%;
+    background:black;
+    display:flex;
+    flex-direction:column;
+}
+
+#menuItems button{
+    background:#0a45ff;
+    color:white;
+    border:none;
+    padding:15px;
+    font-size:16px;
+    cursor:pointer;
+    transition:background-color .3s;
+}
+
+/* Hover color change on nav buttons */
+#menuItems button:hover{
+    background:#b8860b;
+}
+
+/* Jump Menu hidden by default */
+#jumpMenu{
+    list-style:none;
+    padding:0;
+    margin:0;
+    display:none;
+    background:#b8860b;
+}
+
+/* Show jump menu when hovering Recent Articles */
+#recentArticles:hover + #jumpMenu{
+    display:block;
+}
+
+/* Jump menu links */
+#jumpMenu li a{
+    display:block;
+    padding:10px;
+    color:blue;
+    text-decoration:none;
+    transition:all .3s;
+}
+
+/* Hover over jump menu links */
+#jumpMenu li a:hover{
+    background:blue;
+    color:white;
+}
+
+/* Main area shifted right because of nav */
+main{
+    margin-left:200px;
+    padding:20px;
+}
+
+/* Header */
+header{
+    background:red;
+    text-align:center;
+    padding:20px;
+    font-size:28px;
+    font-weight:bold;
+}
+
+/* Articles container */
+#container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+}
+
+/* Article default (light text + transition) */
+article{
+    width:22%;
+    color:#bbb;
+    transition: all 2s;
+}
+
+/* Article hover (darker + expands) */
+article:hover{
+    color:black;
+    transform:scale(1.15);
+}
+
+/* First letter styling */
+article p:first-of-type::first-letter{
+    font-family:"Times New Roman", Times, serif;
+    font-size:36px;
+}
+
+/* Google links arrow */
+a[href*="google.com"]::after{
+    content:url("arrowarrow.png");
+    margin-left:8px;
+}
+
+/* Thank you box bottom right */
+#thanks{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:lightblue;
+    padding:10px 20px;
+}
